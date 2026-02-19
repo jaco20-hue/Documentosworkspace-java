@@ -17,7 +17,7 @@ public class ventanaConPanel {
         // Crear panel
         JPanel panel = new JPanel();
         // Crear etiqueta
-        JLabel texto = new JLabel("HOLA SOY UN PANEL PELMAZO");
+        JLabel texto = new JLabel("HOLA SOY UN PANEL");
         // Agregar etiqueta al panel
         panel.add(texto);
         // Agregar panel a la ventana
