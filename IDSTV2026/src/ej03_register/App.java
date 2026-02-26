@@ -1,11 +1,10 @@
-package ej02_login;
-
+package ej03_register;
 
 public class App {
 
 	public static void main(String[] args) {
-		 new LoginVentana().setVisible(true);
-		 
+		new RegisterPanel().setVisible(true);
+		
 
 	}
 

@@ -4,14 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-import javax.swing.JCheckBox;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
+import javax.swing.*;
 
 public class LoginVentana extends JFrame {
 	
@@ -19,11 +12,11 @@ public class LoginVentana extends JFrame {
 		
 		//---------- CONFIG VENTANA ----------
         this.setTitle("Login");
-        this.setBounds(100, 50, 500, 550);
+        this.setBounds(100, 50, 500, 700);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.getContentPane().setBackground(Color.black);
         this.setLayout(null);
-        this.setResizable(false);
+        this.setResizable(true);
         Image GUAVA = new ImageIcon(
         	    getClass().getResource("/ej02_login/GUAVA.png")
         	).getImage();
@@ -31,13 +24,13 @@ public class LoginVentana extends JFrame {
 
         //---------- PANEL CONTENEDOR ----------
         JPanel login_container = new JPanel();
-        login_container.setSize(500, 500);
-        login_container.setLocation(-10, 0);
+        login_container.setBounds(0,0,500,700);
+        //login_container.setLocation(-10, 0);
         login_container.setBackground(Color.white);
         login_container.setLayout(null);
         this.add(login_container);
+        this.repaint();
         
-      //---------- LOGO ----------
         ImageIcon logoIcon = new ImageIcon(
             getClass().getResource("/ej02_login/Logo.png"));
 
@@ -107,6 +100,9 @@ public class LoginVentana extends JFrame {
         JButton access_btn = new JButton("Continuar");
         access_btn.setSize(180, 35);
         access_btn.setLocation(170, 360);
+        access_btn.setBackground(new Color(40, 167, 69));
+        access_btn.setForeground(Color.white);
+        
         login_container.add(access_btn);
         
        //---------- BOTON LINK ----------
@@ -118,6 +114,19 @@ public class LoginVentana extends JFrame {
         link.setSize(280, 30);
         link.setLocation(120, 405);
         login_container.add(link);
+        
+        JButton link2 = new JButton("<html><u>Crear cuenta</u></html>");
+        link2.setBorderPainted(false);
+        link2.setContentAreaFilled(false);
+        link2.setFocusPainted(false);
+        link2.setForeground(Color.blue);
+        link2.setSize(280, 30);
+        link2.setLocation(120, 500);
+        login_container.add(link2);
+        
+        
+        
         this.repaint();
+      
 	}
 }
